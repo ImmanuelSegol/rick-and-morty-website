@@ -11,7 +11,6 @@ const Header = () => {
         <div style={style.header}>
                 <Logo logo={mainLogo}/>
                 <SearchBar/>
-                    
         </div>
 
     );
