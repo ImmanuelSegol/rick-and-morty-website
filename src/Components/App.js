@@ -1,4 +1,6 @@
 import React from 'react';
+import {Provider} from 'react-redux';
+import store from './store';
 import {style} from "./app.css.js";
 
 
@@ -10,11 +12,13 @@ import ChangePage from './ChangePage/ChangePage.js';
 
 const App = ({loadNextPage}) => {
     return (
-      <div style={style.appWrapper}>
-            <Header/>
-            <DataZone/> 
-            <ChangePage loadNext={loadNextPage}/>
-      </div>
+    <Provider store={store}>
+        <div style={style.appWrapper}>
+              <Header/>
+              <DataZone/> 
+              <ChangePage loadNext={loadNextPage}/>
+        </div>
+    </Provider>
     );
 }
 
